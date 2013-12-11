@@ -1,0 +1,91 @@
+\documentclass[12pt,twoside,a5paper]{book}
+
+\usepackage{anyfontsize}
+\usepackage{scalefnt}
+
+\usepackage[inner=2cm,outer=2cm,top=4cm,bottom=4cm]{geometry}
+
+\newcommand{\bigtext}[2]{\begingroup\scalefont{#1} #2\par\endgroup}
+
+\newcommand{\meme}[1]{\vspace*{\fill}\begin{center}{\bigtext{5}{#1}}\end{center}\vspace*{\fill}\pagebreak}
+
+\newcommand{\longmeme}[1]{\vspace*{\fill}\begin{center}{\bigtext{4}{#1}}\end{center}\vspace*{\fill}\pagebreak}
+
+\newcommand{\verylongmeme}[1]{\vspace*{\fill}\begin{center}{\bigtext{3}{#1}}\end{center}\vspace*{\fill}\pagebreak}
+
+\newcommand{\topic}[2]{\chapter{#1}\bigtext{3}{#2}\vspace*{\fill}\pagebreak}
+
+\linespread{1.4}
+
+\renewcommand{\baselinestretch}{1.0}
+
+\begin{document}
+
+
+\begin{titlepage}
+\begin{center}
+
+\vspace*{3cm}
+
+% Title
+{\LARGE Little Book of}\\
+\bigtext{10}{\textit{Wat}}
+ 
+\vfill
+
+% Bottom of the page
+{\today}
+
+\end{center}
+\end{titlepage}
+
+\vspace*{\fill}
+{\noindent \large A book about real words of advice\footnote{You think I made these up? Go to your company's wiki and search for \textit{"best practices"} or \textit{"guidelines"} - you see - this is why it is funny!} from real professionals carefully given to those in need. 
+\\
+\\
+They reveal the infinite wisdom gained by \textit{experts} over many years of experience in the software development industry.\\[2cm]}
+{\LARGE Have fun!}
+\vspace*{\fill}
+\pagebreak
+
+\topic{Code Wisdoms}{THINK DIFFERENTLY\\THINK SMARTER}
+
+\meme{Reuse code when possible}
+
+\longmeme{Have in mind when using \texttt{new Date()} the current time is added}
+
+\meme{Avoid unnecessary heavy functions}
+
+\longmeme{Check error logs for errors introduced by new code, and fix the errors}
+
+\topic{Data Processing Wisdoms}{}
+
+\longmeme{If working with large datasets, release memory as soon as possible}
+
+\meme{Use indexes in the database}
+
+\meme{Only get necessary data from the database}
+
+\meme{Avoid using queries in a loop}
+
+\meme{Avoid unnecessary abstractions}
+
+\longmeme{Make sure a transaction is not needed within an action}
+
+\meme{Prefer one large query}
+
+\topic{Design Wisdoms}{}
+\longmeme{Determine which architectural style is most appropriate for the use cases}
+
+\longmeme{Gather feedback and use an iterating design approach}
+
+\meme{Hide private parts of the system}
+
+\meme{Design for Scaling Out}
+
+\longmeme{Separate representation from implementation}
+
+\topic{Style Wisdoms}{}
+\verylongmeme{Default font should be Trebuchet MS\footnote{Pro tip: Guess what MS stands for...}. Trebuchet MS is a "web-safe" font and included in the core fonts of the web}
+
+\end{document}
