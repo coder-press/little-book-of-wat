@@ -1,4 +1,4 @@
-Little-book-of-WAT
+Little book of WAT
 ==================
 
 The "little book of calm" of programming
